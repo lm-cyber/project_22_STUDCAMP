@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - app
+      - old_front
 
 jobs:
   build-and-push:
