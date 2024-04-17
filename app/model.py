@@ -1,10 +1,10 @@
+from schema import ModelDayInput
 from collections import defaultdict
 import random
 
 
 class Model:
-    """заплатка что с моделью"""
-
+        """заплатка что с моделью"""
     def __init__(self):
         self.data_cashe = defaultdict(dict)
         # k v r
@@ -33,4 +33,4 @@ class Model:
         return val
 
     def __call__(self, data: ModelDayInput):
-        return self.forward(data)
+        return self.forward(data)d(data)
