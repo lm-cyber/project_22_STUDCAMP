@@ -13,8 +13,8 @@ export default async function Fetch({ action, method, body }) {
 
     if (method === HttpMethod.GET) {
         data = await fetch(url, {
+	    mode: "no-cors",
             method: "GET",
-	    credentials: "no-cors",
             headers: headers,
         })
             .then((response) => response.json())
@@ -28,7 +28,7 @@ export default async function Fetch({ action, method, body }) {
     } else {
         data = await fetch(url, {
             method: method,
-	    credentials: "no-cors",
+	    mode: "no-cors",
             headers: headers,
             body: body ? JSON.stringify(body) : ""
         })
