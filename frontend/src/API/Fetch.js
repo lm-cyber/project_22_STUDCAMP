@@ -14,7 +14,7 @@ export default async function Fetch({ action, method, body }) {
     if (method === HttpMethod.GET) {
         data = await fetch(url, {
             method: "GET",
-	    credentials: "same-origin",
+	    credentials: "no-cors",
             headers: headers,
         })
             .then((response) => response.json())
@@ -28,7 +28,7 @@ export default async function Fetch({ action, method, body }) {
     } else {
         data = await fetch(url, {
             method: method,
-	    credentials: "same-origin",
+	    credentials: "no-cors",
             headers: headers,
             body: body ? JSON.stringify(body) : ""
         })
