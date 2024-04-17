@@ -7,7 +7,7 @@ var headers = {
 
 export default async function Fetch({ action, method, body }) {
 
-    var url = `http://92.255.77.65/${action}` // for server
+    var url = `http://80.68.156.51/${action}` // for server
     // var url = `http://0.0.0.0:8080/${action}` // for local
     var data
 
